@@ -13,7 +13,7 @@ const change = (e)=>{
 const setsubmit = (e)=>{
     e.preventDefault();
    try {
-     const mes = axios.post("https://backenddukkan.onrender.com/api/products",data);
+     const mes = axios.post("https://backend-dukkan-ybv3.vercel.app/api/products",data);
     setmsg(mes.message);
     setdata({name:"",price:"",image:""});
    } catch (error) {
