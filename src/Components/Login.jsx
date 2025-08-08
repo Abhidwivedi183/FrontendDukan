@@ -14,7 +14,7 @@ const setsubmit = async (e)=>{
     e.preventDefault();
    try {
      const mes =await axios.post("https://backend-dukkan.vercel.app/api/products",data);
-    setmsg(mes.message);
+    setmsg(mes.data.message);
     setdata({name:"",price:"",image:""});
    } catch (error) {
     console.log(error);
