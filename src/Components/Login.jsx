@@ -5,15 +5,15 @@ function Login() {
 
 
 
-const [data,setdata] = useState({name:"",price:"",image:""});
+const [data,setdata] = useState({name:"",price:"",image:""} );
 const [msg,setmsg] = useState("");
 const change = (e)=>{
   setdata({...data,[e.target.name]:e.target.value});
 }
-const setsubmit = (e)=>{
+const setsubmit = async (e)=>{
     e.preventDefault();
    try {
-     const mes = axios.post("https://backend-dukkan.vercel.app/api/products",data);
+     const mes =await axios.post("https://backend-dukkan.vercel.app/api/products",data);
     setmsg(mes.message);
     setdata({name:"",price:"",image:""});
    } catch (error) {
