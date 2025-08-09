@@ -45,9 +45,8 @@ function ShowMyWork() {
     <div className="products-container">
       {products.map((item) => (
         <div key={item._id} className="product-card">
-          <img src={item.image} alt={item.name} />
           <h3>{item.name}</h3>
-          <p>₹{item.price}</p>
+          <p>₹ {item.price}</p>
           <button onClick={() => deleteProduct(item._id)}>Delete</button>
         </div>
       ))}
