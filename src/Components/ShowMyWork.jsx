@@ -11,13 +11,26 @@ function ShowMyWork() {
   }, []);
 
   const fetchProducts = async () => {
-    try {
-      const res = await axios.get("https://backend-dukkan.vercel.app/api/products");
-      setProducts(res.data);
-    } catch (err) {
-      console.error(err);
+  try {
+    const res = await axios.get("https://backend-dukkan.vercel.app/api/products");
+    console.log("API Response:", res.data);
+
+    // Handle different possible shapes
+    let data = [];
+    if (Array.isArray(res.data)) {
+      data = res.data;
+    } else if (Array.isArray(res.data.products)) {
+      data = res.data.products;
+    } else if (Array.isArray(res.data.data)) {
+      data = res.data.data;
     }
-  };
+
+    setProducts(data);
+  } catch (err) {
+    console.error("Fetch error:", err);
+    setProducts([]); // fallback to empty
+  }
+};
 
   const deleteProduct = async (id) => {
     try {
