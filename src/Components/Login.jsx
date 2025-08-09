@@ -15,7 +15,7 @@ function Login() {
   const setsubmit = async (e) => {
     e.preventDefault();
     try {
-      const mes = await axios.post("https://backend-dukkan.vercel.app/api/products", data);
+      const mes = await axios.post("https://backenddukkan.onrender.com/api/products", data);
       setMsg(mes.data.message);
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 2000);

@@ -12,7 +12,7 @@ function ShowMyWork() {
 
   const fetchProducts = async () => {
   try {
-    const res = await axios.get("https://backend-dukkan.vercel.app/api/products");
+    const res = await axios.get("https://backenddukkan.onrender.com/api/products");
     console.log("API Response:", res.data);
 
     // Handle different possible shapes
@@ -34,7 +34,7 @@ function ShowMyWork() {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`https://backend-dukkan.vercel.app/api/products/${id}`);
+      await axios.delete(`https://backenddukkan.onrender.com/api/products/${id}`);
       setProducts(products.filter(item => item._id !== id));
     } catch (err) {
       console.error(err);
