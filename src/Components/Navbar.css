@@ -1,0 +1,134 @@
+
+
+body.day-mode {
+  background: linear-gradient(-45deg, #87CEFA, #b2fefa, #e0ffff, #add8e6);
+  background-size: 400% 400%;
+  animation: gradientDay 15s ease infinite;
+  color: #000;
+}
+
+body.night-mode {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a2e);
+  background-size: 400% 400%;
+  animation: gradientNight 15s ease infinite;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.navbar.day-mode .nav-link { color: #000; }
+.navbar.night-mode .nav-link { color: #fff; }
+.nav-link:hover { color: yellow; }
+
+.toggle-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.home-banner {
+  text-align: center;
+  margin-top: 40px;
+}
+.ronaldo-img {
+  width: 200px;
+  border-radius: 12px;
+  animation: fadeIn 2s ease forwards;
+}
+.animated-text {
+  font-size: 24px;
+  margin-top: 20px;
+  animation: textFadeIn 2s ease forwards;
+}
+
+@keyframes textFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientDay {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientNight {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.home-banner {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 2s ease forwards;
+}
+
+.ronaldo-img {
+  width: 200px;
+  border-radius: 12px;
+  animation: fadeIn 2s ease forwards;
+}
+
+.animated-text {
+  font-size: 24px;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  animation: typing 2s steps(40, end) forwards;
+}
+
+.hindi-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.ronaldo-img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  animation: fadeIn 2s ease forwards;
+}
+
